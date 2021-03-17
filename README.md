@@ -1,5 +1,5 @@
 # SMLXXTEA.kt
-Kotlin multiplatform encryption library (xxtea kotlin implementation)
+Pure Kotlin Multiplatform Encryption Library (xxtea cipher kotlin implementation)
 
 __________________________________
 

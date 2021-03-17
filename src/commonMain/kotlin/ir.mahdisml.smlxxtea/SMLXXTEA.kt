@@ -21,16 +21,12 @@ class SMLXXTEA (private val k:String) {
                 return null
             }
             val bytes = decryptByte(data) ?: return null
-            var result = ""
-            bytes.map {
-                result += it
-            }
-            return result
+            bytes.decodeToString()
+
         } catch (ex: Exception) {
             null
         }
     }
-
     fun encryptString(data: String): String? {
         return try {
             bytesToHex(encrypt(data)!!)
@@ -45,6 +41,7 @@ class SMLXXTEA (private val k:String) {
             null
         }
     }
+
     private fun initialize () : Boolean {
         return if (!initialized) {
             try {
